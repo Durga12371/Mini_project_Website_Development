@@ -2,7 +2,7 @@
 FROM node:14
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /index
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
@@ -18,5 +18,5 @@ EXPOSE 3000
 
 # Start the application
 CMD [ "npm", "start" ]
-docker build -t my-app .
+docker build -t index .
 
